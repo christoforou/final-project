@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#lecture").onclick = () => {
+document.querySelector("#lecture").onclick = () => {
     
     clear()
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Schedule";
 
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qByLectureType/lecture";
     request.open("GET", api_endpoint);
@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+      let formatted_data = process_data(course);
+      document.querySelector("#result").innerHTML += formatted_data;
       });
     };
     request.send();
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "Schedule";
   
     document.querySelector("#dropdownMenuButton").innerHTML = "Lab";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qByLectureType/lab";
     request.open("GET", api_endpoint);
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Schedule";
     document.querySelector("#dropdownMenuButton").innerHTML = "Hybrid";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qByLectureType/hybrid";
     request.open("GET", api_endpoint);
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Monday";
-    console.log("i m here now");
+    console.log("selection");
     let day = document.querySelector('#monday')
     console.log(day.getAttribute('data-day'))
     const request = new XMLHttpRequest();
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Tuesday";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qBySchedule/tuesday";
     request.open("GET", api_endpoint);
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Wednesday";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qBySchedule/wednesday";
     request.open("GET", api_endpoint);
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Thursday";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qBySchedule/thursday";
     request.open("GET", api_endpoint);
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Friday";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qBySchedule/friday";
     request.open("GET", api_endpoint);
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
       "Saturday";
-    console.log("i m here now");
+    console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qBySchedule/saturday";
     request.open("GET", api_endpoint);
@@ -261,8 +261,8 @@ function process_data(course) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#advance").onclick = () => {
-    document.querySelector("#result").innerHTML = ""; // this works
+document.querySelector("#advance").onclick = () => {
+document.querySelector("#result").innerHTML = ""; // this works
 
     let mytitle = document.querySelector("#title-value").value;
     let myname = document.querySelector("#name-value").value;
