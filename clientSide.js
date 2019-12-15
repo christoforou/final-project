@@ -24,6 +24,7 @@ document.querySelector("#lecture").onclick = () => {
   };
 
 
+    
   document.querySelector("#lab").onclick = () => {
     clear()
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
@@ -73,7 +74,7 @@ document.querySelector("#lecture").onclick = () => {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("#monday").onclick = () => {
+document.querySelector("#monday").onclick = () => {
     clear()
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
