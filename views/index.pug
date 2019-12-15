@@ -12,7 +12,7 @@ html(lang="en")
             include ../style.css
             include ../mobile.css
         script
-            include ../client.js
+            include ../clientSide.js
 
 
     body
@@ -27,9 +27,9 @@ html(lang="en")
                     br
                     br
                     br
-                    input(class="search-bar m-2" id="title-value" placeholder="Title" aria-label="Search" )
+                    input(class="search-bar m-2" id="title-value" placeholder="Subject" aria-label="Search" )
                     
-                    input(class="search-bar m-2" id="name-value" placeholder="Name" aria-label="Search" )
+                    input(class="search-bar m-2" id="name-value" placeholder="Course Title" aria-label="Search" )
                     
                     input(class="search-bar m-2" id="instructor-value" placeholder="Instructor" aria-label="Search")
                     
@@ -61,12 +61,12 @@ html(lang="en")
                 table(class="table table-hover")
                     thead
                         tr
-                            th(class="table-head" scope="col") Title
-                            th(class="table-head" scope="col") Course
+                            th(class="table-head" scope="col") Subject
+                            th(class="table-head" scope="col") Course Title
                             th(class="table-head" scope="col") Schedule
                             th(class="table-head" scope="col") Instructor
                             th(class="table-head" scope="col") Credits
-                            th(class="table-head" scope="col") Lecture
+                            th(class="table-head" scope="col") Lecture Type
                             th(class="table-head" scope="col") Seats
                     tbody(id="result")
                        
