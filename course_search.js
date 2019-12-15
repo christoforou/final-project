@@ -4,19 +4,19 @@ let routes = require('./routes');
 
 let pug = require("pug");
 
-let app = express();
+let course_search = express();
 
 
-app.set('view engine','pug')
+course_search.set('view engine','pug')
 
 
-app.use('/',routes);
+course_search.use('/',routes);
 
 
-app.get('/',function(req,res){
+course_search.get('/',function(req,res){
     res.render('index');
 })
 
-app.listen(3000,function(){
+course_search.listen(3000,function(){
     console.log('Listening on port 3000!')
 })
