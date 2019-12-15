@@ -1,0 +1,63 @@
+.search-bar{
+    width: 200px;
+    height: 40px;
+    background-color: E6E6E6;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+  
+}
+
+.btn{
+    width: 200px;
+    background-color: #00264d;
+    color: #E6E6E6;
+    border: none;
+}
+
+#nav{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.dropdown-menu{
+    cursor: pointer;
+}
+
+.table-head{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    color:  #00264d;
+    border: none;
+}
+
+table{
+    margin-top: 15px;
+}
+
+p{
+    margin: 0px;
+}
+
+#logo{
+    width: 80%;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+  }
+  .bounce {
+    animation-name: bounce;
+  }
