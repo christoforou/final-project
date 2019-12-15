@@ -30,6 +30,7 @@ const data = [
         prerequiste: "None",
         lecture_type: "Lecture/Lab"
       },
+      
       {
         crn: "12329",
         title: "CUS1116",
