@@ -1,7 +1,5 @@
 @media(max-width: 375px){
     .search-bar {
-        /* margin-left: 35px;
-        margin-right: 35px; */
         width: 365px;
         height: 60px;
         background-color: E6E6E6;
@@ -13,10 +11,8 @@
     .btn{
         width: 365px;
         height: 60px;
-        /* margin-left: 35px;
-        margin-right: 35px; */
-        background-color: #00264d;
-        color: #E6E6E6;
+        background-color: cyan;
+        color: black;
         border: none;`
     }
 
