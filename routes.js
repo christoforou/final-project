@@ -1,124 +1,59 @@
-let express = require("express");
-let sampleData = require("./sampleData");
+var express = require('express');
+var router = express.Router();
+const data = require(__dirname + '/courses.json');
 
-let data = sampleData.module;
+//__________________________________ROUTES____________________________________
 
-let router = express.Router();
+router.get('/', (req, res) => {
+  console.log(req.url);
+  res.render(__dirname + '/index.ejs', { data: data });
 
-//search by lecture_type
-router.get("/courses/qByLectureType/:query", function(req, res) {
-  query = req.params["query"].toLowerCase();
-  console.log(query);
-  sendData = [];
-  data.map(subject => {
-    subject.courses.map(course => {
-      if (course.lecture_type.toLowerCase().includes(query)) {
-        sendData.push(course);
-      }
-    });
-  });
-  res.json(sendData);
+  //res.sendFile(__dirname + '/index.html');
 });
 
-//search by schedule
-router.get("/courses/qBySchedule/:query", function(req, res) {
-  query = req.params["query"].toLowerCase();
-  console.log(query);
-  sendData = [];
-  data.map(subject => {
-    subject.courses.map(course => {
-      course.schedule.map(schedule => {
-        if (schedule.date.toLowerCase().includes(query)) {
-          sendData.push(course);
-        }
-      });
-    });
-  });
-  res.json(sendData);
+router.get('/courses', (req, res) => {
+  console.log(req.url);
+  res.render(__dirname + '/index.ejs', { data: data });
+
+  //  res.json(data.courses);
 });
 
-//search by seats available
-router.get("/courses/qBySeats", function(req, res) {
-  sendData = [];
-  data.map(subject => {
-    subject.courses.map(course => {
-      let seats_avaliable = parseInt(course.seats, 10);
-      console.log(seats_avaliable, "hello");
-      if (seats_avaliable > 0) {
-        console.log(course);
-        sendData.push(course);
-      }
-    });
-  });
-  res.json(sendData);
+router.get('/courses/qcode/:course_code', (req, res) => {
+  qcode = req.params.course_code;
+  var FILTERED_DATA = data.courses.filter(d => d.course_code.toLowerCase().includes(qcode));
+  res.json(FILTERED_DATA);
+  console.log(req.url);
+  res.render(__dirname + '/index.ejs', { data: data });
 });
 
-//search by combinations
-router.get("/courses/qByTitle/:queryTitle/qByName/:queryName/qByInstructor/:queryInstructor", function(req, res) {
-  
-  qtitle = req.params['queryTitle'].toLowerCase();
-  qname = req.params["queryName"].toLowerCase();
-  qinstructor = req.params['queryInstructor'].toLowerCase();
-
-  sendData = [];
-  data.map(subject => {
-    subject.courses.map(course => {
-      if(qtitle === "none" && qname === "none" && qinstructor === "none"){
-        sendData.push(course);
-      }
-
-      if(qtitle != "none" && qname != "none" && qinstructor != "none"){
-        if (course.title.toLowerCase().includes(qtitle) && course.name.toLowerCase().includes(qname) && course.instructor.toLowerCase().includes(qinstructor)) {
-          sendData.push(course);
-        }
-      }
-
-      if(qtitle ==="none" && qname === "none" && qinstructor != "none"){
-        if (course.instructor.toLowerCase().includes(qinstructor)) {
-          sendData.push(course);
-        }
-      }
-
-      if(qtitle ==="none" && qname != "none" && qinstructor === "none"){
-        if (course.name.toLowerCase().includes(qname)) {
-          sendData.push(course);
-        }
-      }
-
-      if(qtitle !="none" && qname === "none" && qinstructor === "none"){
-
-        if (course.title.toLowerCase().includes(qtitle)) {
-          sendData.push(course);
-        }
-      }
-
-      if(qtitle !="none" && qname != "none" && qinstructor === "none"){
-        if (course.title.toLowerCase().includes(qtitle) && course.name.toLowerCase().includes(qname)) {
-          sendData.push(course);
-        }
-      }
-
-      if(qtitle !="none" && qname === "none" && qinstructor != "none"){
-
-        if (course.title.toLowerCase().includes(qtitle)&&course.instructor.toLowerCase().includes(qinstructor)) {
-          sendData.push(course);
-        }
-      }
-
-      if(qtitle ==="none" && qname != "none" && qinstructor != "none"){
-        if (course.name.toLowerCase().includes(qname)&&course.instructor.toLowerCase().includes(qinstructor)) {
-          sendData.push(course);
-        }
-      }
-    });
-  });
-  res.json(sendData);
-
+router.get('/courses/qtitle/:title', (req, res) => {
+  qtitle = req.params.title;
+  var FILTERED_DATA = data.courses.filter(d => d.title.toLowerCase().replace(/\s/g, '').includes(qtitle));
+  res.json(FILTERED_DATA);
 });
 
+router.get('/courses/qinstructor/:instructor', (req, res) => {
+  qinstructor = req.params.instructor;
+  var FILTERED_DATA = data.courses.filter(d => d.instructor.toLowerCase().replace(/\s/g, '').includes(qinstructor));
+  res.json(FILTERED_DATA);
+});
 
+router.get('/courses/qday/:course_day', (req, res) => {
+  qday = req.params.course_day;
+  var FILTERED_DATA = data.courses.filter(d => d.course_day.toLowerCase().replace(/\s/g, '').includes(qday));
+  res.json(FILTERED_DATA);
+});
 
+router.get('/courses/qseats/', (req, res) => {
+  qseats = req.params.seats_available;
+  var FILTERED_DATA = data.courses.filter(d => d.seats_available > 0);
+  res.json(FILTERED_DATA);
+});
 
-
+router.get('/courses/qtype/:course_type', (req, res) => {
+  qtype = req.params.course_type;
+  var FILTERED_DATA = data.courses.filter(d => d.course_type.toLowerCase().replace(/\s/g, '').includes(qtype));
+  res.json(FILTERED_DATA);
+});
 
 module.exports = router;
