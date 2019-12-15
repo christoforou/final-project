@@ -8,8 +8,8 @@ const data = [
         name: "Software Application",
         credits: "3",
         schedule: [
-          { date: "Tuesday", time: "1700-1825" },
-          { date: "Friday", time: "1700-1825" }
+          { date: "Tuesday", time: "17:00-18:25" },
+          { date: "Friday", time: "17:00-18:25" }
         ],
         instructor: "Barry Lieberman",
         seats: "18",
@@ -22,8 +22,8 @@ const data = [
         name: "Computer Prog Fund I",
         credits: "3",
         schedule: [
-          { date: "Monday", time: "0905-1030" },
-          { date: "Thursday", time: "0950-1030" }
+          { date: "Monday", time: "09:05-10:30" },
+          { date: "Thursday", time: "09:50-10:30" }
         ],
         instructor: "Joan DeBello",
         seats: "0",
@@ -55,7 +55,17 @@ const data = [
         prerequiste: "CUS1126",
         lecture_type: "Hybrid-Classroom & Online"
       },
-  
+      {
+        crn: "12948",
+        title: "CUS1161",
+        name: "Software Engineering",
+        credits: "3",
+        schedule: [{ date: "Wednesday", time: "1350-1640" }],
+        instructor: "Christoforos Christoforou",
+        seats: "3",
+        prerequiste: "CUS1156",
+        lecture_type: "Lecture/Lab"
+      },
       {
         crn: "13802",
         title: "CUS1186",
@@ -94,7 +104,17 @@ const data = [
         prerequiste: "CSS1005 or HCI1001",
         lecture_type: "Hybrid-Classroom & Online"
       },
-   
+      {
+        crn: "15411",
+        title: "CSS1018",
+        name: "SQL & Cloud Database Security",
+        credits: "3",
+        schedule: [{ date: "Monday", time: "1910-2200" }],
+        instructor: "Anil Chacko",
+        seats: "2",
+        prerequiste: "CSS1005 or CUS1165",
+        lecture_type: "Lectue/Lab"
+      },
       {
         crn: "13913",
         title: "CSS1006",
@@ -260,7 +280,20 @@ const data = [
         prerequiste: "MTH1013",
         lecture_type: "Lecture"
       },
-
+      {
+        crn: "12571",
+        title: "MTH1022",
+        name: "Discrete Mathematics",
+        credits: "3",
+        schedule: [
+          { date: "Monday", time: "17:00-18:25" },
+          { date: "Thursday", time: "17:00-18:25" }
+        ],
+        instructor: "Satyanand Singh",
+        seats: "0",
+        prerequiste: "None",
+        lecture_type: "Lecture"
+      }
     ]
   },
   {
@@ -271,7 +304,7 @@ const data = [
         title: "Net1011",
         name: "Introduction to Networks",
         credits: "3",
-        schedule: [{ date: "Wednesday", time: "1040-1330" }],
+        schedule: [{ date: "Wednesday", time: "10:40-13:30" }],
         instructor: "Maxine Greenidge",
         seats: "0",
         prerequiste: "None",
@@ -282,7 +315,7 @@ const data = [
         title: "Net1015",
         name: "Routing & Switching Essentials",
         credits: "3",
-        schedule: [{ date: "Wednesday", time: "0730-1020" }],
+        schedule: [{ date: "Wednesday", time: "07:30-10:20" }],
         instructor: "Maxine Greenidge",
         seats: "0",
         prerequiste: "Net1011",
@@ -293,13 +326,23 @@ const data = [
         title: "Net1061",
         name: "Advanced Network Routing",
         credits: "3",
-        schedule: [{ date: "Saturday", time: "0830-1120" }],
+        schedule: [{ date: "Saturday", time: "08:30-11:20" }],
         instructor: "John Rullan",
         seats: "25",
         prerequiste: "Net1015",
         lecture_type: "Lecture/Lab"
       },
-     
+      {
+        crn: "11336",
+        title: "Net1091",
+        name: "Networking Internship",
+        credits: "3",
+        schedule: [{ date: "None", time: "None" }],
+        instructor: "Nikhil Yadav",
+        seats: "0",
+        prerequiste: "None",
+        lecture_type: "Internship"
+      }
     ]
   }
 ];
