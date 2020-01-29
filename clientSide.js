@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelector("#lecture").onclick = () => {
     
     clear()
-    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
-      "Schedule";
+    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML="Schedule";
 
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture";
     console.log("selection");
@@ -15,8 +14,8 @@ document.querySelector("#lecture").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-      let formatted_data = process_data(course);
-      document.querySelector("#result").innerHTML += formatted_data;
+      let sampleData = findData(course);
+      document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -40,8 +39,8 @@ document.querySelector("#lecture").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -63,8 +62,8 @@ document.querySelector("#lecture").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -90,8 +89,8 @@ document.querySelector("#monday").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -112,8 +111,8 @@ document.querySelector("#monday").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -123,8 +122,7 @@ document.querySelector("#monday").onclick = () => {
   document.querySelector("#wednesday").onclick = () => {
     clear()
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
-    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
-      "Wednesday";
+    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML = "Wednesday";
     console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qBySchedule/wednesday";
@@ -134,8 +132,8 @@ document.querySelector("#monday").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -156,8 +154,8 @@ document.querySelector("#monday").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -167,8 +165,7 @@ document.querySelector("#monday").onclick = () => {
   document.querySelector("#friday").onclick = () => {
     clear()
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
-    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
-      "Friday";
+    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML = "Friday";
     console.log("selection");
     const request = new XMLHttpRequest();
     let api_endpoint = "http://127.0.0.1:3000/courses/qBySchedule/friday";
@@ -178,8 +175,8 @@ document.querySelector("#monday").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -199,8 +196,8 @@ document.querySelector("#monday").onclick = () => {
       const data = JSON.parse(request.responseText);
       console.log(data);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -220,8 +217,8 @@ document.addEventListener("DOMContentLoaded", () => {
     request.onload = () => {
       const data = JSON.parse(request.responseText);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
@@ -239,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function clear(){
-  document.querySelector("#result").innerHTML = ""; // this works
+  document.querySelector("#result").innerHTML = "";
   document.querySelector("#title-value").value = "";
   document.querySelector("#name-value").value = "";
   document.querySelector("#instructor-value").value = "";
@@ -247,7 +244,7 @@ function clear(){
 
 
 
-function process_data(course) {
+function findData(course) {
   return `<tr>
     <td>${course.title}</td>
     <td>${course.name}</td>
@@ -263,7 +260,7 @@ function process_data(course) {
 
 document.addEventListener("DOMContentLoaded", () => {
 document.querySelector("#advance").onclick = () => {
-document.querySelector("#result").innerHTML = ""; // this works
+document.querySelector("#result").innerHTML = "";
 
     let mytitle = document.querySelector("#title-value").value;
     let myname = document.querySelector("#name-value").value;
@@ -288,8 +285,8 @@ document.querySelector("#result").innerHTML = ""; // this works
     request.onload = () => {
       const data = JSON.parse(request.responseText);
       data.map(course => {
-        let formatted_data = process_data(course);
-        document.querySelector("#result").innerHTML += formatted_data;
+        let sampleData = findData(course);
+        document.querySelector("#result").innerHTML += sampleData;
       });
     };
     request.send();
