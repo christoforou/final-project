@@ -1,0 +1,28 @@
+@media(max-width: 400px){
+    .search-bar {
+        width: 350px;
+        height: 50px;
+        background-color: orange;
+        border: none;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    .btn{
+        width: 365px;
+        height: 60px;
+        background-color: green;
+        color: blue;
+        border: none;`
+    }
+
+    #table-div{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+
+    #nav{
+        margin-left: 70px;
+    }
+
+}
