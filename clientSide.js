@@ -17,8 +17,7 @@ document.querySelector("#lecture").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
@@ -41,8 +40,7 @@ document.querySelector("#lecture").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
@@ -64,18 +62,16 @@ document.querySelector("#lecture").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
   };
-}
-);
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {
-document.querySelector("#monday").onclick = () => {
+  document.querySelector("#monday").onclick = () => {
     clear()
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML = "Monday";
@@ -92,8 +88,7 @@ document.querySelector("#monday").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
@@ -114,8 +109,7 @@ document.querySelector("#monday").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
@@ -136,8 +130,7 @@ document.querySelector("#monday").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
@@ -158,8 +151,7 @@ document.querySelector("#monday").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
@@ -180,8 +172,7 @@ document.querySelector("#monday").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
@@ -201,14 +192,12 @@ document.querySelector("#monday").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
   };
-}
-);
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#seats").onclick = () => {
@@ -224,14 +213,12 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      }
-      );
+      });
     };
     request.send();
     return false;
   };
-}
-);
+});
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#clear").onclick = () => {
@@ -239,8 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML = "Schedule";
   };
-}
-);
+});
 
 function clear(){
   document.querySelector("#result").innerHTML = "";
@@ -299,5 +285,4 @@ document.querySelector("#result").innerHTML = "";
     request.send();
     return false;
   };
-}
-);
+});
