@@ -17,11 +17,9 @@ router.get("/courses/qByLectureType/:query", function(req, res) {
       }
     }
     );
-  }
-  );
+  });
   res.json(sendData);
-}
-);
+});
 
 
 router.get("/courses/qBySchedule/:query", function(req, res) {
@@ -56,8 +54,7 @@ router.get("/courses/qBySeats", function(req, res) {
   }
   );
   res.json(sendData);
-}
-);
+});
 
 
 router.get("/courses/qByTitle/:queryTitle/qByName/:queryName/qByInstructor/:queryInstructor", function(req, res) {
@@ -116,13 +113,10 @@ router.get("/courses/qByTitle/:queryTitle/qByName/:queryName/qByInstructor/:quer
           sendData.push(course);
         }
       }
-    }
-    );
-  }
-  );
+    });
+  });
   res.json(sendData);
 
-}
-);
+});
 
 module.exports = router;
