@@ -15,8 +15,7 @@ router.get("/courses/qByLectureType/:query", function(req, res) {
       if (course.lecture_type.toLowerCase().includes(query)) {
         sendData.push(course);
       }
-    }
-    );
+    });
   });
   res.json(sendData);
 });
@@ -51,8 +50,7 @@ router.get("/courses/qBySeats", function(req, res) {
       }
     }
     );
-  }
-  );
+  });
   res.json(sendData);
 });
 
