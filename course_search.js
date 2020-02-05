@@ -8,7 +8,7 @@ let pug = require("pug");
 let course_search = express();
 
 
-course_search.set('view engine','pug')
+course_search.set('view engine','pug');
 
 
 course_search.use('/',routes);
