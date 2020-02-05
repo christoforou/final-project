@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.querySelector("#lecture").onclick = () => {
     
     clear()
-    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML =
-      "Schedule";
+    document.querySelector("#dropdownMenuButtonForSchedule").innerHTML = "Schedule";
 
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture";
     console.log("i m here now");
@@ -17,7 +16,8 @@ document.querySelector("#lecture").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+              );
     };
     request.send();
     return false;
@@ -40,7 +40,8 @@ document.querySelector("#lecture").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+              );
     };
     request.send();
     return false;
@@ -62,12 +63,14 @@ document.querySelector("#lecture").onclick = () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+            );
     };
     request.send();
     return false;
   };
-});
+}
+        );
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -88,7 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+           );
     };
     request.send();
     return false;
@@ -109,7 +113,8 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+         );
     };
     request.send();
     return false;
@@ -130,7 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+      );
     };
     request.send();
     return false;
@@ -151,7 +157,8 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+        );
     };
     request.send();
     return false;
@@ -172,7 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+         );
     };
     request.send();
     return false;
@@ -192,12 +200,14 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+       );
     };
     request.send();
     return false;
   };
-});
+}
+     );
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#seats").onclick = () => {
@@ -213,12 +223,14 @@ document.addEventListener("DOMContentLoaded", () => {
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+        );
     };
     request.send();
     return false;
   };
-});
+}
+      );
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#clear").onclick = () => {
@@ -226,7 +238,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#dropdownMenuButton").innerHTML = "Lecture Type";
     document.querySelector("#dropdownMenuButtonForSchedule").innerHTML = "Schedule";
   };
-});
+}
+  );
 
 function clear(){
   document.querySelector("#result").innerHTML = "";
@@ -280,9 +293,11 @@ document.querySelector("#result").innerHTML = "";
       data.map(course => {
         let info = process_data(course);
         document.querySelector("#result").innerHTML += info;
-      });
+      }
+      );
     };
     request.send();
     return false;
   };
-});
+}
+    );
