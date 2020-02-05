@@ -16,10 +16,8 @@ course_search.use('/',routes);
 
 course_search.get('/',function(req,res){
     res.render('index');
-}
-                 )
+})
 
 course_search.listen(3000,function(){
     console.log('OPERATING ON PORT 3000!!!!!!!!!!!!')
-}
-                    )
+})
